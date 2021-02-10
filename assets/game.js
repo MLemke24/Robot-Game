@@ -67,6 +67,7 @@ enemyHealth = enemyHealth - playerAttack;
 
 if (playerHealth <=0) {
   window.alert(playerName + " has died! ");
+  break;
 }
 else {
   window.alert(playerName + " still has " + playerHealth + " health left. "); 
@@ -96,6 +97,7 @@ else {
 for(var i = 0; i < enemyNames.length; i++) {
   var pickedEnemyName = enemyNames[i];
   enemyHealth = 50;
+  while (enemyHealth > 0 && playerHealth > 0);
   fight(pickedEnemyName);
 }
 
