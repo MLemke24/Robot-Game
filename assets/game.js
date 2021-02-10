@@ -25,7 +25,8 @@ var enemyAttack = 12;
 
 //Fight Function
 var fight = function(enemyName) {
-  window.alert("The Fight Begins!");
+
+  while(enemyHealth > 0){
 
   // Fight or Skip
 
@@ -84,13 +85,18 @@ else {
   } else {
     fight();
   }
+}
   // invalid option
-} else {
+
+else {
   window.alert("You need to choose a valid option. Try Again!");
+}
 }
 };
 for(var i = 0; i < enemyNames.length; i++) {
-  fight(enemyNames[i]);
+  var pickedEnemyName = enemyNames[i];
+  enemyHealth = 50;
+  fight(pickedEnemyName);
 }
 
 // fight ()
